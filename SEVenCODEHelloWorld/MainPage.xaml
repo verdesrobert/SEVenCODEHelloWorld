@@ -3,18 +3,16 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
+    mc:Ignorable="d" 
     d:DesignHeight="600" d:DesignWidth="800">
     <UserControl.Resources>
-        <BeginStoryboard x:Key="bohBeginStoryboard">
+        <BeginStoryboard x:Key="bohBeginStoryboard" >
             <Storyboard x:Name="mainStoryboard">
                 <DoubleAnimation BeginTime="0:0:1" RepeatBehavior="Forever" AutoReverse="True" Duration="0:0:2" To="1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="imgSEVenCODE" d:IsOptimized="True"/>
                 <DoubleAnimation BeginTime="0:0:1" RepeatBehavior="Forever" AutoReverse="True" Duration="0:0:2" To="1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="imgSEVenCODE" d:IsOptimized="True"/>
-                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(TextBlock.FontSize)" Storyboard.TargetName="textBlock">
-                    <EasingDoubleKeyFrame KeyTime="0:0:2" Value="50"/>
-                    <EasingDoubleKeyFrame KeyTime="0:0:3" Value="1"/>
-                </DoubleAnimationUsingKeyFrames>
-                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock">
+                <DoubleAnimation BeginTime="0:0:1" RepeatBehavior="Forever" AutoReverse="True" Duration="0:0:2" To="1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
+                <DoubleAnimation BeginTime="0:0:1" RepeatBehavior="Forever" AutoReverse="True" Duration="0:0:2" To="1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
+                <ObjectAnimationUsingKeyFrames RepeatBehavior="Forever" Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock">
                     <DiscreteObjectKeyFrame KeyTime="0:0:2">
                         <DiscreteObjectKeyFrame.Value>
                             <Visibility>Visible</Visibility>
@@ -31,7 +29,7 @@
                         </DiscreteObjectKeyFrame.Value>
                     </DiscreteObjectKeyFrame>
                 </ObjectAnimationUsingKeyFrames>
-                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.GlobalOffsetZ)" Storyboard.TargetName="txtZoom">
+                <DoubleAnimationUsingKeyFrames RepeatBehavior="Forever" Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.GlobalOffsetZ)" Storyboard.TargetName="txtZoom">
                     <EasingDoubleKeyFrame KeyTime="0" Value="-3000"/>
                     <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
                     <EasingDoubleKeyFrame KeyTime="0:0:2" Value="3000"/>
@@ -45,7 +43,7 @@
                     <EasingDoubleKeyFrame KeyTime="0:0:10" Value="3000"/>
                     <EasingDoubleKeyFrame KeyTime="0:0:11" Value="7000"/>
                 </DoubleAnimationUsingKeyFrames>
-                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.GlobalOffsetZ)" Storyboard.TargetName="txtZoom2">
+                <DoubleAnimationUsingKeyFrames RepeatBehavior="Forever" Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.GlobalOffsetZ)" Storyboard.TargetName="txtZoom2">
                     <EasingDoubleKeyFrame KeyTime="0" Value="-3000"/>
                     <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-3000"/>
                     <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
@@ -59,7 +57,7 @@
                     <EasingDoubleKeyFrame KeyTime="0:0:10" Value="0"/>
                     <EasingDoubleKeyFrame KeyTime="0:0:11" Value="3000"/>
                 </DoubleAnimationUsingKeyFrames>
-                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.GlobalOffsetZ)" Storyboard.TargetName="txtZoom3">
+                <DoubleAnimationUsingKeyFrames RepeatBehavior="Forever" Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.GlobalOffsetZ)" Storyboard.TargetName="txtZoom3">
                     <EasingDoubleKeyFrame KeyTime="0" Value="-3000"/>
                     <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-3000"/>
                     <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-3000"/>
@@ -73,7 +71,7 @@
                     <DiscreteDoubleKeyFrame KeyTime="0:0:10" Value="-3000"/>
                     <EasingDoubleKeyFrame KeyTime="0:0:11" Value="0"/>
                 </DoubleAnimationUsingKeyFrames>
-                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.GlobalOffsetZ)" Storyboard.TargetName="txtZoom4">
+                <DoubleAnimationUsingKeyFrames RepeatBehavior="Forever" Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.GlobalOffsetZ)" Storyboard.TargetName="txtZoom4">
                     <EasingDoubleKeyFrame KeyTime="0" Value="-3000"/>
                     <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-3000"/>
                     <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-3000"/>
@@ -90,39 +88,46 @@
             </Storyboard>
         </BeginStoryboard>
     </UserControl.Resources>
-    <Grid x:Name="LayoutRoot" Background="White">
-        <Image Source="SEVenCODE.png" x:Name="imgSEVenCODE" RenderTransformOrigin="0.5,0.5" >
-            <Image.RenderTransform>
-                <CompositeTransform ScaleY="0" ScaleX="0"/>
-            </Image.RenderTransform>
-        </Image>
+    <Grid x:Name="LayoutRoot" Background="Black">
+        
         <TextBlock Name="txtZoom4" FontStretch="UltraExpanded" Foreground="DarkGreen" FontSize="50" TextWrapping="Wrap" RenderTransformOrigin="0.5,0.5">
-            010101001010010101001010100101001010100101001010010100101010100101001010010101010010100101001010100100101010010101001010011001010101001010100101001010100101001010010100101010100101001010010101010010100101001010100100101010010101001010010101
+            010101001010010101001010100101001010100101001010010100101010100101001010010101010010100101001010100100101010010010101001010010101001010100101001010100101001010010100101010100101001010010101010010100101001010100100101010010010101001010010101001010100101001010100101001010010100101010100101001010010101010010100101001010100100101010010101001010011001010101001010100101001010100101001010010100101010100101001010010101010010100101001010100100101010010101001010010101
             <TextBlock.Projection>
                 <PlaneProjection  >
                 </PlaneProjection>
             </TextBlock.Projection>
         </TextBlock>
         <TextBlock Name="txtZoom3" FontStretch="UltraExpanded" Foreground="DarkGreen" FontSize="50" TextWrapping="Wrap" RenderTransformOrigin="0.5,0.5">
-            010101001010010101001010100101001010100101001010010100101010100101001010010101010010100101001010100100101010010101001010011001010101001010100101001010100101001010010100101010100101001010010101010010100101001010100100101010010101001010010101
+            010101001010010101001010100101001010100101001010010100101010100101001010010101010010100101001010100100101010010101001010011001010101001010100101001010100101001010010100101010100101001010010101010010100101001010100100101010010010101001010010101001010100101001010100101001010010100101010100101001010010101010010100101001010100100101010010010101001010010101001010100101001010100101001010010100101010100101001010010101010010100101001010100100101010010101001010010101
             <TextBlock.Projection>
                 <PlaneProjection  >
                 </PlaneProjection>
             </TextBlock.Projection>
         </TextBlock>
+        <Image Source="SEVenCODE.png" x:Name="imgSEVenCODE" RenderTransformOrigin="0.5,0.5" >
+            <Image.RenderTransform>
+                <CompositeTransform ScaleY="0" ScaleX="0"/>
+            </Image.RenderTransform>
+        </Image>
+        <TextBlock x:Name="textBlock" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" FontSize="50" Text="Hello World">
+            <TextBlock.RenderTransform>
+                <CompositeTransform ScaleY="0" ScaleX="0"/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
         <TextBlock Name="txtZoom2" FontStretch="UltraExpanded" Foreground="DarkGreen" FontSize="50" TextWrapping="Wrap" RenderTransformOrigin="0.5,0.5">
-            010101001010010101001010100101001010100101001010010100101010100101001010010101010010100101001010100100101010010101001010011001010101001010100101001010100101001010010100101010100101001010010101010010100101001010100100101010010101001010010101
+            010101001010010101001010101010010100101010010101001010010101001010010100101001010101001010010100101010100101001010010101001001010100100101010010100101010010101001010010101001010010100101001010101001010010100101010100101001010010101001001010100100100101001010100101001010010100101010100101001010010101010010100101001010100100101010010101001010011001010101001010100101001010100101001010010100101010100101001010010101010010100101001010100100101010010101001010010101
             <TextBlock.Projection>
                 <PlaneProjection  >
                 </PlaneProjection>
             </TextBlock.Projection>
         </TextBlock>
         <TextBlock Name="txtZoom" FontStretch="UltraExpanded" Foreground="DarkGreen" FontSize="50" TextWrapping="Wrap" RenderTransformOrigin="0.5,0.5">
-            010101001010010101001010100101001010100101001010010100101010100101001010010101010010100101001010100100101010010101001010011001010101001010100101001010100101001010010100101010100101001010010101010010100101001010100100101010010101001010010101
+            010101001010010101001010100101001010100101001010010100101010100101001010010101010010100101001010100100101010010101001010011001010101001010100101000101010010100101010010101001010010101001010010100101001010101001010010100101010100101001010010101001001010100100101010010100101010010101001010010101001010010100101001010101001010010100101010100101001010010101001001010100101010100101001010010100101010100101001010010101010010100101001010100100101010010101001010010101
             <TextBlock.Projection>
                 <PlaneProjection >
                 </PlaneProjection>
             </TextBlock.Projection></TextBlock>
-        <TextBlock x:Name="textBlock" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="50" Text="Hello World"/>
+       
+
     </Grid>
 </UserControl>
