@@ -110,4 +110,9 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>rename SEVenCODEHelloWorldTestPage.html index.html
+xcopy  "$(TargetDir)*.*" "$(ProjectDir)\Examples\" /e /i /h /Y
+</PostBuildEvent>
+  </PropertyGroup>
 </Project>
