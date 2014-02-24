@@ -18,9 +18,10 @@ namespace SEVenCODEHelloWorld
         public MainPage()
         {
             InitializeComponent();
+            this.MouseLeftButtonUp += MainPage_MouseLeftButtonUp;
         }
 
-        private void MainPage_OnTap(object sender, GestureEventArgs e)
+        void MainPage_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             HtmlPage.Window.Navigate(new Uri("https://github.com/verdesrobert/SEVenCODEHelloWorld", UriKind.Absolute));
         }
