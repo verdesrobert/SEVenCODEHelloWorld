@@ -89,7 +89,7 @@
         </BeginStoryboard>
     </UserControl.Resources>
     <Grid x:Name="LayoutRoot" Background="Black">
-        
+
         <TextBlock Name="txtZoom4" FontStretch="UltraExpanded" Foreground="DarkGreen" FontSize="50" TextWrapping="Wrap" RenderTransformOrigin="0.5,0.5">
             010101001010010101001010100101001010100101001010010100101010100101001010010101010010100101001010100100101010010010101001010010101001010100101001010100101001010010100101010100101001010010101010010100101001010100100101010010010101001010010101001010100101001010100101001010010100101010100101001010010101010010100101001010100100101010010101001010011001010101001010100101001010100101001010010100101010100101001010010101010010100101001010100100101010010101001010010101
             <TextBlock.Projection>
@@ -127,7 +127,12 @@
                 <PlaneProjection >
                 </PlaneProjection>
             </TextBlock.Projection></TextBlock>
-       
 
+        <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" Cursor="Hand" HorizontalAlignment="Right">
+            <StackPanel Background="White" VerticalAlignment="Center" >
+                <TextBlock Text=" verdesrobert on     " FontSize="40"/>
+            </StackPanel>
+            <Image Source="Github.png" Margin="-70,0,0,0" Width="80"/>
+        </StackPanel>
     </Grid>
 </UserControl>
